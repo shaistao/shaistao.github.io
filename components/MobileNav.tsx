@@ -5,9 +5,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const sections = [
   { id: 'welcome', label: 'Welcome', emoji: '👋' },
-  { id: 'about', label: 'About me', emoji: '👤' },
   { id: 'work', label: 'My work', emoji: '💼' },
   { id: 'skills', label: 'Skills', emoji: '⚡' },
+  { id: 'about', label: 'About me', emoji: '👤' },
   { id: 'connect', label: 'Connect', emoji: '🤝' },
 ];
 
@@ -71,9 +71,9 @@ export default function MobileNav({ children }: { children?: React.ReactNode }) 
           aria-label="Menu"
         >
           <div className="flex flex-col items-center justify-center gap-1.5 w-6">
-            <span className={`w-6 h-0.5 bg-green-900 transition-transform ${isOpen ? 'rotate-45 translate-y-2' : ''}`} />
-            <span className={`w-6 h-0.5 bg-green-900 transition-opacity ${isOpen ? 'opacity-0' : ''}`} />
-            <span className={`w-6 h-0.5 bg-green-900 transition-transform ${isOpen ? '-rotate-45 -translate-y-2' : ''}`} />
+            <span className={`w-6 h-0.5 bg-sky-800 transition-transform ${isOpen ? 'rotate-45 translate-y-2' : ''}`} />
+            <span className={`w-6 h-0.5 bg-sky-800 transition-opacity ${isOpen ? 'opacity-0' : ''}`} />
+            <span className={`w-6 h-0.5 bg-sky-800 transition-transform ${isOpen ? '-rotate-45 -translate-y-2' : ''}`} />
           </div>
           <AnimatePresence>
             {showLabel && currentSection && (
@@ -81,7 +81,7 @@ export default function MobileNav({ children }: { children?: React.ReactNode }) 
                 initial={{ opacity: 0, width: 0 }}
                 animate={{ opacity: 1, width: 'auto' }}
                 exit={{ opacity: 0, width: 0 }}
-                className="text-sm font-semibold text-green-900 whitespace-nowrap overflow-hidden"
+                className="text-sm font-semibold text-sky-800 whitespace-nowrap overflow-hidden"
               >
                 {currentSection.emoji} {currentSection.label}
               </motion.span>
@@ -113,13 +113,13 @@ export default function MobileNav({ children }: { children?: React.ReactNode }) 
             transition={{ type: 'spring', damping: 25, stiffness: 200 }}
             className="lg:hidden fixed top-0 right-0 bottom-0 w-72 bg-white z-50 shadow-2xl"
             style={{
-              backgroundColor: '#f5fcf7',
-              backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='3.5' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.15'/%3E%3C/svg%3E")`,
+              backgroundColor: '#dde8f5',
+              backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='3.5' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.35'/%3E%3C/svg%3E")`,
             }}
           >
             <div className="p-8">
               <div className="mb-12">
-                <h2 className="text-xl font-black text-green-900 leading-tight">
+                <h2 className="text-xl font-black text-sky-800 leading-tight">
                   Shaista (Shay)<br />Obaidullah
                 </h2>
                 <p className="text-sm text-gray-600 mt-2">Design Portfolio</p>
@@ -132,7 +132,7 @@ export default function MobileNav({ children }: { children?: React.ReactNode }) 
                       onClick={() => scrollToSection(section.id)}
                       className={`text-left text-lg transition-all duration-300 w-full ${
                         activeSection === section.id
-                          ? 'text-green-900 font-semibold'
+                          ? 'text-sky-800 font-semibold'
                           : 'text-gray-500'
                       }`}
                     >

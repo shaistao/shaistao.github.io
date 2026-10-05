@@ -17,15 +17,101 @@ html {
   overflow-y: scroll;
 }
 
+@media (pointer: fine) {
+  body:not(.playground), body:not(.playground) *, body:not(.playground) *::before, body:not(.playground) *::after {
+    cursor: none !important;
+  }
+}
+
+@keyframes cursor-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(7, 89, 133, 0.55), 0 0 0 0 rgba(7, 89, 133, 0.35);
+  }
+  100% {
+    box-shadow: 0 0 0 14px rgba(7, 89, 133, 0), 0 0 0 22px rgba(7, 89, 133, 0);
+  }
+}
+
+.cursor-pulse {
+  animation: cursor-pulse 1.2s ease-out infinite;
+}
+
+@keyframes skill-marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-33.3333%); }
+}
+
+.skill-marquee {
+  animation-name: skill-marquee;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.skill-marquee-group:hover .skill-marquee {
+  animation-play-state: paused;
+}
+
+.no-scrollbar {
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+.no-scrollbar::-webkit-scrollbar-track,
+.no-scrollbar::-webkit-scrollbar-thumb {
+  display: none !important;
+  background: transparent !important;
+}
+
 body {
-  background: #f8fefa;
+  background: #f8fbfe;
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
 
 section {
   position: relative;
-  background: #f8fefa;
+  background: #f8fbfe;
   min-height: 100vh;
   scroll-snap-align: start;
+}
+
+@keyframes heart-beat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.06); }
+}
+.heart-beat {
+  animation: heart-beat 3s ease-in-out infinite;
+}
+
+@keyframes orb-pulse {
+  0% { transform: scale(0.5); opacity: 0; }
+  30% { opacity: 0.5; }
+  100% { transform: scale(1.8); opacity: 0; }
+}
+.orb-pulse {
+  animation: orb-pulse 3s ease-out infinite;
+  filter: blur(10px);
+}
+
+@keyframes rocket-shiver {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(-0.6deg); }
+}
+.rocket-shiver {
+  animation: rocket-shiver 0.6s ease-in-out infinite;
+  display: inline-block;
+  transform-origin: center;
+}
+
+@keyframes bolt-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-1px); }
+}
+.bolt-bounce {
+  animation: bolt-bounce 1.4s ease-in-out infinite;
+  display: inline-block;
 }
