@@ -1,0 +1,7 @@
+1:"$Sreact.fragment"
+2:I[88260,["/_next/static/chunks/0.a~~p2mt6px6.js","/_next/static/chunks/02-4g2~vsfguc.js"],"ClientSegmentRoot"]
+3:I[69906,["/_next/static/chunks/0b0li8phgl~un.js"],"default"]
+4:I[10875,["/_next/static/chunks/0.a~~p2mt6px6.js","/_next/static/chunks/02-4g2~vsfguc.js"],"default"]
+5:I[57910,["/_next/static/chunks/0.a~~p2mt6px6.js","/_next/static/chunks/02-4g2~vsfguc.js"],"default"]
+0:{"rsc":["$","$1","c",{"children":[[["$","script","script-0",{"src":"/_next/static/chunks/0b0li8phgl~un.js","async":true}]],["$","$L2",null,{"Component":"$3","slots":{"children":["$","$L4",null,{"parallelRouterKey":"children","template":["$","$L5",null,{}]}]},"serverProvidedParams":{"params":{},"promises":["$@6"]}}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"hskiqdleuYnK-QliIACNO"}
+6:"$0:rsc:props:children:1:props:serverProvidedParams:params"
